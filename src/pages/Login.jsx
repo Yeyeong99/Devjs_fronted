@@ -1,3 +1,4 @@
+// Login.jsx
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
@@ -87,19 +88,20 @@ function Login() {
             </button>
           </form>
 
-          <div className="google-login">
-            <GoogleLogin />
-          </div>
+          <div className="social-login">
+            <div className="google-login hover-button">
+              <GoogleLogin />
+            </div>
 
-          <div className="kakao-login">
-            <button onClick={handleKakaoLogin} className="kakao-btn">
-              <img
-                src="/kakao_logo.png"
-                alt="Kakao"
-                style={{ height: "20px", marginRight: "8px" }}
-              />
-              카카오로 로그인
-            </button>
+            <div className="kakao-login">
+              <button onClick={handleKakaoLogin} className="kakao-btn hover-button">
+                <img
+                  src="/kakao_login_medium.png"
+                  alt="카카오 로그인"
+                  className="kakao-img"
+                />
+              </button>
+            </div>
           </div>
         </div>
 
